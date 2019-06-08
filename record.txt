@@ -1,3 +1,14 @@
 git:
    git clone ...
+   git add .
+   git status
+   git commit -m "remark"
+   git remote -v
+   git push origin master
+   git branch -a
+   git checkout -b dev
+   git remote rm origin  删除https连接方式  
+   ssh-keygen -t rsa  生产密钥 公钥配置到github
+   git remote add origin 复制ssh地址
+   
    
