@@ -2,16 +2,19 @@
   <div class="wrapper">
     <label for="title">标题</label>
     <input id="title" type="text" v-model="title">
-    <label for="content">内容</label>
-    <input id="content" type="text" v-model="content">
-    <div class="btn" @click="add()">添加</div>
+    <div>
+      <label for="content">内容</label>
+      <input id="content" type="text" v-model="content">
+    </div>
+
+    <button class="btn" @click="add()">添加</button>
   </div>
 </template>
 
 <script>
 import store from "@/store";
 export default {
-  name: "add",
+  name: "Add",
   components: {},
   props: {},
   data() {
@@ -25,6 +28,9 @@ export default {
   methods: {
     add() {
       store.commit("addItem", { title: this.title, content: this.content });
+      this.title = "";
+      this.content = "";
+      this.$router.push("/home/list");
     }
   },
   created() {},
