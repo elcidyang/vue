@@ -26,3 +26,4 @@ git:
    git push origin :dev
 
    git reflog
+   git reset --hard HEAD@{0}     --回退版本
