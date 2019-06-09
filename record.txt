@@ -14,5 +14,6 @@ git:
    ssh -v git@github.com   //github.com在设置里面是否设置了ssh keys值
    将密钥两文件拷贝到 /home/xxx/.ssh/   修改名为：id_rsa  id_dsa.pub
 
-   
-   
+   git push origin dev
+   git checkout master
+   git merge dev
